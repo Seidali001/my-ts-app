@@ -8,18 +8,31 @@ function App() {
     console.log("App rendering");
     return (
         <div className="App">
-            This is App component
-            <AppContent/>
-            <Rating/>
-            <Accordion/>
+    {/*        <PageContent title={"This is App component"}/>
+            <PageContent title={"My friends"}/>
+            Article 1
+            <Rating value={3}/>*/}
+            <Accordion titleValue={"Menu"} collapsed={true}/>
+            <Accordion titleValue={"Users"} collapsed={false}/>
+   {/*         Article 2
+            <Rating  value={0}/>
+            <Rating  value={1}/>
+            <Rating  value={2}/>
+            <Rating  value={3}/>
+            <Rating  value={4}/>
+            <Rating  value={5}/>*/}
         </div>
     )
 }
 
-function AppContent() {
-    console.log("AppContent rendering");
+type TypePropsPageContent = {
+    title: string
+}
+
+function PageContent(props: TypePropsPageContent) {
+    console.log("PageContent rendering");
     return (
-        <> which contains other components, that return JSX:</>
+        <h1>{props.title}</h1>
     )
 }
 
