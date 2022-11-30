@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
+import {Rating} from "./components/Rating/Rating";
 
 
 function App() {
@@ -18,29 +19,7 @@ function App() {
 function AppContent() {
     console.log("AppContent rendering");
     return (
-        <> which contains other components, that return elements:</>
-    )
-}
-
-function Rating() {
-    console.log("Rating rendering");
-    return (
-        <>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-        </>
-    )
-}
-
-function Star() {
-    console.log("Star rendering");
-    return (
-        <div>
-            <>Star</>
-        </div>
+        <> which contains other components, that return JSX:</>
     )
 }
 
